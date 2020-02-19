@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <success>Always</success>
+        <operations>
+            <!-- Will check for RBSE Standard, or RBSE Hardcore -->
+            <li Class="ModCheck.isModLoaded">
+                <modName>Rah's Bionics and Surgery Expansion</modName>
+                <altModNames>
+                    <li>RBSE Hardcore Edition</li>
+                </altModNames>
+                <yourMod>RBSE Back to Basics</yourMod>
+                <errorOnFail>true</errorOnFail>
+                <customMessageFail>*Rah's Bionics and Surgery Expansion (or RBSE Hardcore Edition) is not loaded*</customMessageFail>
+            </li>
+            <!-- Check for load order -->
+            <li Class="ModCheck.loadOrder">
+				<modName>Rah's Bionics and Surgery Expansion</modName>
+				<altModNames>
+					<li>RBSE Hardcore Edition</li>
+				</altModNames>
+				<yourMod>RBSE Back to Basics</yourMod>
+				<errorOnFail>true</errorOnFail>
+				<customMessageFail>*Load RBSE Back to Basics after Rah's Bionics and Surgery Expansion (or RBSE Hardcore Edition)*</customMessageFail>
+			</li>
+        </operations>
+    </Operation>
+</Patch>
